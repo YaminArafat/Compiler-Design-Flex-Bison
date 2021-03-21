@@ -1,0 +1,50 @@
+var [a-zA-Z]
+space [ ]
+
+%{
+int i,n;
+char var[100];
+char word[100];
+char keyword[100];
+%}
+
+%%
+",,""inc"({space})+({var})+ {printf("Header is found\n");}
+\n
+"getstarted"":"   {printf("Main Function Starts\n");}
+"finish"":"	 {printf("Main Function Finished\n");}
+({space})+"integer"({space})+({var})+ {printf("Variable Found\n");}
+({space})+"word"({space})+({var})+ {printf("String Found\n");}\
+({space})+"do""~" {printf("New Block created\n");}
+({space})+"while~" {printf("While loop found\n");}
+({space})+"done~" {printf("Block ended\n");}
+({space})+"if~" {printf("If condition\n");}
+({space})+({var})+[ ]*[=][0-9]+":" {printf("Integer value assigned\n");}
+({space})+({var})+[ ]*[=]({var}|{space})+":" {printf("String value assigned\n");}
+. 
+%%
+
+int yywrap()
+{ 
+    return 1;
+}
+
+int main()
+{
+	yyin = freopen("input.txt", "r",stdin);
+	yyout = freopen("output.txt","w", stdout);
+	yylex();
+	fclose(yyin);
+	fclose(yyout);
+	return 0;
+}
+
+
+
+
+
+
+
+for(i = 0; i < 10; i++){
+	printf("%c", a[i]);
+	}

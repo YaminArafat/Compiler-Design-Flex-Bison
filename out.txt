@@ -1,0 +1,30 @@
+Header compiled successfully
+ Header compiled successfully
+
+Header compiled successfully
+ Header compiled successfully
+
+Main started
+If condition started
+24
+3
+condition ended
+If condition started
+12
+condition ended
+For loop started
+5
+5
+5
+5
+5
+Loop ended
+While loop started
+10
+10
+10
+10
+10
+Loop ended
+Main Ended
+syntax error

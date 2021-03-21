@@ -1,0 +1,23 @@
+include awp1
+include awp2
+main
+show ( 1 plus 23 )
+iif ( 2 ge 1 )
+show ( 2 minus 1 )
+else 
+show ( 2 plus 1 )
+cond_end
+iif ( 5 ge 6 )
+show ( 5 plus 6 )
+elif ( 5 le 7 )
+show ( 5 plus 7 )
+else 
+show ( 6 plus 7 )
+cond_end
+ffor ( 1 to 5 )
+show ( 5 )
+loop_end
+wwhile ( 5 to 10 )
+show ( 10 )
+loop_end
+main_end
